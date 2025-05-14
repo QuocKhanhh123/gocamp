@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "name": "Bán đảo Sơn Trà",
+    "location": "Phường Thọ Quang, Quận Sơn Trà, Đà Nẵng",
+    "description": "Khu bảo tồn thiên nhiên với rừng nguyên sinh và bãi biển hoang sơ, thích hợp cho cắm trại qua đêm.",
+    "price": "500000",
+    "features": ["rừng", "bãi biển", "ngắm bình minh", "dã ngoại"],
+    "image": "https://source.unsplash.com/800x600/?sontra,forest,camping",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  },
+  {
+    "id": 2,
+    "name": "Giếng Trời",
+    "location": "Xã Hòa Ninh, Huyện Hòa Vang, Đà Nẵng",
+    "description": "Nằm sâu trong rừng nguyên sinh, có suối và thác nước, phù hợp cho những ai yêu thích khám phá thiên nhiên.",
+    "price": "0",
+    "features": ["suối", "thác nước", "rừng", "hoang sơ"],
+    "image": "https://source.unsplash.com/800x600/?waterfall,forest,camping",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  },
+  {
+    "id": 3,
+    "name": "Làng Vân",
+    "location": "Dưới chân đèo Hải Vân, Đà Nẵng",
+    "description": "Ngôi làng nhỏ hoang sơ, yên bình, thích hợp cho cắm trại và dã ngoại gần biển.",
+    "price": "0",
+    "features": ["biển", "làng hoang sơ", "dã ngoại"],
+    "image": "https://source.unsplash.com/800x600/?camping,sea,village",
+    "source": "https://motortrip.vn/luu-tru/cam-trai-da-nang"
+  },
+  {
+    "id": 4,
+    "name": "Bãi Cát Vàng",
+    "location": "Bán đảo Sơn Trà, Đà Nẵng",
+    "description": "Bãi biển với cát vàng mịn, nước biển trong xanh, lý tưởng cho cắm trại và tắm biển.",
+    "price": "450000",
+    "features": ["biển", "bãi cát vàng", "bơi lội"],
+    "image": "https://source.unsplash.com/800x600/?goldenbeach,camping",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  },
+  {
+    "id": 5,
+    "name": "Cảng Tiên Sa",
+    "location": "Quận Sơn Trà, Đà Nẵng",
+    "description": "Bãi biển đẹp với làn nước trong xanh, có đầy đủ dịch vụ lưu trú và giải trí.",
+    "price": "150000",
+    "features": ["biển", "dịch vụ lưu trú", "cắm trại"],
+    "image": "https://source.unsplash.com/800x600/?beach,camping,resort",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  },
+  {
+    "id": 6,
+    "name": "Ghềnh Bàng",
+    "location": "Bán đảo Sơn Trà, Đà Nẵng",
+    "description": "Khu vực hoang sơ với bãi đá và nước biển trong, thích hợp cho cắm trại và lặn biển.",
+    "price": "0",
+    "features": ["biển", "bãi đá", "lặn biển"],
+    "image": "https://source.unsplash.com/800x600/?rockybeach,danang,camping",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  },
+  {
+    "id": 7,
+    "name": "Yên Retreat",
+    "location": "Xã Hòa Bắc, Huyện Hòa Vang, Đà Nẵng",
+    "description": "Khu cắm trại ven sông với không gian yên tĩnh, thích hợp cho nghỉ dưỡng cuối tuần.",
+    "price": "250000",
+    "features": ["sông", "nghỉ dưỡng", "yên tĩnh"],
+    "image": "https://source.unsplash.com/800x600/?river,camping,retreat",
+    "source": "https://danatravel.vn/thong-tin-du-lich/cac-diem-camping-tai-da-nang.html"
+  },
+  {
+    "id": 8,
+    "name": "Mũi Nghê",
+    "location": "Bán đảo Sơn Trà, Đà Nẵng",
+    "description": "Điểm đón bình minh đẹp, có mỏm đá hình đầu sư tử biển, phù hợp cho cắm trại và câu cá.",
+    "price": "150000",
+    "features": ["mỏm đá", "ngắm bình minh", "câu cá"],
+    "image": "https://source.unsplash.com/800x600/?sunrise,cliff,camping",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  },
+  {
+    "id": 9,
+    "name": "Hồ Hòa Trung",
+    "location": "Xã Hòa Liên, Huyện Hòa Vang, Đà Nẵng",
+    "description": "Hồ nước nhân tạo với cánh đồng cỏ xanh mướt, không khí trong lành, lý tưởng cho cắm trại.",
+    "price": "0",
+    "features": ["hồ", "cánh đồng cỏ", "không khí mát mẻ"],
+    "image": "https://source.unsplash.com/800x600/?lake,camping,field",
+    "source": "https://danatravel.vn/thong-tin-du-lich/cac-diem-camping-tai-da-nang.html"
+  },
+  {
+    "id": 10,
+    "name": "Đèo Hải Vân",
+    "location": "Giáp ranh Đà Nẵng – Huế",
+    "description": "Đèo nổi tiếng với cảnh quan hùng vĩ, thích hợp cho cắm trại và ngắm cảnh.",
+    "price": "0",
+    "features": ["đèo", "ngắm cảnh", "rừng núi"],
+    "image": "https://source.unsplash.com/800x600/?mountain,pass,camping",
+    "source": "https://www.decathlon.vn/blog/cam-trai-da-nang"
+  }
+
+]
