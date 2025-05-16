@@ -4,16 +4,16 @@ import { Campsite } from '@/models/Campsite';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const id = parseInt(params.id);
+    const { id } = await params;
     const client = await clientPromise;
     const db = client.db();
 
     const campsite = await db
       .collection<Campsite>('campsites')
-      .findOne({ id });
+      .findOne({ id: parseInt(id) });
 
     if (!campsite) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 });

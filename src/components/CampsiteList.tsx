@@ -1,5 +1,4 @@
 'use client';
-
 import CampsiteCard from './CampsiteCard';
 
 interface Campsite {
@@ -11,11 +10,7 @@ interface Campsite {
   image: string;
 }
 
-interface CampsiteListProps {
-  data: Campsite[];
-}
-
-export default function CampsiteList({ data }: CampsiteListProps) {
+export default function CampsiteList({ data }: { data: Campsite[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {data.map((campsite) => (

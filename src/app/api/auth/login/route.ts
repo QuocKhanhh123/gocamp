@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
   const response = NextResponse.json({ message: 'Logged in' });
   response.headers.set(
     'Set-Cookie',
-    serialize('token', token, {
+    serialize('access_token', token, {
       httpOnly: true,
       path: '/',
       maxAge: 60 * 60 * 24 * 7,

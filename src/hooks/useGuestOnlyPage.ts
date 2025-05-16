@@ -10,8 +10,10 @@ export default function useGuestOnlyPage() {
   const router = useRouter();
 
   useEffect(() => {
+    console.log('useGuestOnlyPage', { user, loading }); 
     if (!loading && user) {
-      router.replace('/profile'); // hoặc "/" tuỳ app
+      console.log('Redirecting to profile page');
+      router.push('/'); 
     }
   }, [user, loading, router]);
 

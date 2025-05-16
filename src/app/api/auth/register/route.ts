@@ -1,24 +1,41 @@
-// app/api/auth/register/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
 import clientPromise from '@/libs/mongodb';
 import { User } from '@/models/User';
 
 export async function POST(req: NextRequest) {
-  const { fullname, username, email, password } = await req.json();
-  const hashed = await bcrypt.hash(password, 10);
+  try {
+    const { username, email, password } = await req.json();
 
-  const client = await clientPromise;
-  const db = client.db();
+    if (!username || !email || !password) {
+      return NextResponse.json({ error: 'Thiếu thông tin bắt buộc' }, { status: 400 });
+    }
 
-  const existing = await db.collection<User>('users').findOne({ email });
-  if (existing) {
-    return NextResponse.json({ error: 'Email already exists' }, { status: 400 });
+    const client = await clientPromise;
+    const db = client.db();
+
+    const existingUser = await db.collection<User>('users').findOne({
+      $or: [{ email }, { username }]
+    });
+
+    if (existingUser) {
+      return NextResponse.json({ error: 'Email hoặc username đã được sử dụng' }, { status: 400 });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser: User = {
+      fullname: `${username}`, 
+      username,
+      email,
+      password: hashedPassword
+    };
+
+    await db.collection<User>('users').insertOne(newUser);
+
+    return NextResponse.json({ message: 'Đăng ký thành công' });
+  } catch (err) {
+    console.error('Registration error:', err);
+    return NextResponse.json({ error: 'Lỗi máy chủ' }, { status: 500 });
   }
-
-  await db.collection<User>('users').insertOne({
-    fullname, username, email, password: hashed,
-  });
-
-  return NextResponse.json({ message: 'User registered successfully' });
 }

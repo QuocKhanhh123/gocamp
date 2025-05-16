@@ -1,11 +1,20 @@
 
 import Navbar from "@/components/ui/nav-bar";
-
-export default function Layout({children}: {children: React.ReactNode}) {
+import Footer from "@/components/ui/footer";
+import { AuthProvider } from "@/context/AuthContext";
+export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <section>
+            <AuthProvider>
+                    
             <Navbar />
-            {children}
+            <div className="container mx-auto px-4 py-8">
+                {children}
+            </div>
+            <Footer />
+                    
+            </AuthProvider>      
+
         </section>
     );
 }

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Lều Cắm Trại 4 Người NatureHike",
+    "description": "Lều cắm trại chống nước, chống tia UV, dễ dựng, phù hợp cho 3-4 người.",
+    "price": 1590000,
+    "images": [
+      "https://example.com/images/leu-naturehike-1.jpg"
+    ],
+    "category": "Lều trại",
+    "brand": "NatureHike",
+    "stock": 12,
+    "rating": 4.5,
+    "reviews": 87,
+    "weight": "3.2kg",
+    "dimensions": "210 x 210 x 135 cm",
+    "materials": ["Vải Oxford 210D", "Khung nhôm"],
+    "isFeatured": true
+  },
+  {
+    "id": 2,
+    "name": "Đèn LED Cắm Trại Sạc USB",
+    "description": "Đèn LED chống nước, nhiều chế độ sáng, tích hợp pin sạc qua USB.",
+    "price": 199000,
+    "images": [
+      "https://example.com/images/den-led-usb.jpg"
+    ],
+    "category": "Thiết bị chiếu sáng",
+    "brand": "Xiaomi",
+    "stock": 34,
+    "rating": 4.8,
+    "reviews": 152,
+    "weight": "300g",
+    "dimensions": "15 x 8 x 8 cm",
+    "materials": ["Nhựa ABS", "LED cao cấp"],
+    "isFeatured": false
+  },
+  {
+    "id": 3,
+    "name": "Túi Ngủ Du Lịch 4 Mùa",
+    "description": "Túi ngủ giữ ấm, nhỏ gọn, thích hợp cho cắm trại mọi thời tiết.",
+    "price": 499000,
+    "images": [
+      "https://example.com/images/tui-ngu-4mua.jpg"
+    ],
+    "category": "Túi ngủ",
+    "brand": "NatureHike",
+    "stock": 20,
+    "rating": 4.6,
+    "reviews": 63,
+    "weight": "1.1kg",
+    "dimensions": "190 x 75 cm",
+    "materials": ["Polyester", "Lót cotton"],
+    "isFeatured": false
+  },
+  {
+    "id": 4,
+    "name": "Ghế Xếp Dã Ngoại Gọn Nhẹ",
+    "description": "Ghế xếp nhôm siêu nhẹ, dễ dàng mang theo, có túi đựng tiện lợi.",
+    "price": 320000,
+    "images": [
+      "https://example.com/images/ghe-xep-da-ngoai.jpg"
+    ],
+    "category": "Ghế trại",
+    "brand": "Coleman",
+    "stock": 50,
+    "rating": 4.2,
+    "reviews": 45,
+    "weight": "850g",
+    "dimensions": "60 x 50 x 70 cm",
+    "materials": ["Khung nhôm", "Vải Oxford"],
+    "isFeatured": false
+  },
+  {
+    "id": 5,
+    "name": "Bếp Gas Dã Ngoại Mini",
+    "description": "Bếp gas nhỏ gọn, đánh lửa tự động, phù hợp cho nấu ăn ngoài trời.",
+    "price": 290000,
+    "images": [
+      "https://example.com/images/bep-gas-mini.jpg"
+    ],
+    "category": "Dụng cụ nấu ăn",
+    "brand": "FireMaple",
+    "stock": 40,
+    "rating": 4.7,
+    "reviews": 101,
+    "weight": "450g",
+    "dimensions": "12 x 12 x 10 cm",
+    "materials": ["Thép không gỉ", "Đồng"],
+    "isFeatured": true
+  },
+  {
+    "id": 6,
+    "name": "Bình Giữ Nhiệt 1L Outdoor",
+    "description": "Bình giữ nhiệt inox, dung tích 1L, giữ nóng và lạnh đến 24 giờ.",
+    "price": 250000,
+    "images": [
+      "https://example.com/images/binh-giu-nhiet.jpg"
+    ],
+    "category": "Bình nước",
+    "brand": "Lock&Lock",
+    "stock": 60,
+    "rating": 4.4,
+    "reviews": 37,
+    "weight": "600g",
+    "dimensions": "28 x 8 x 8 cm",
+    "materials": ["Inox 304"],
+    "isFeatured": false
+  },
+  {
+    "id": 7,
+    "name": "Bộ Dao Dã Ngoại Đa Năng",
+    "description": "Bộ dao nhỏ gọn gồm dao, kéo, mở nắp, tua vít, dùng cho các tình huống cắm trại.",
+    "price": 180000,
+    "images": [
+      "https://example.com/images/dao-da-nang.jpg"
+    ],
+    "category": "Dụng cụ sinh tồn",
+    "brand": "Victorinox",
+    "stock": 15,
+    "rating": 4.9,
+    "reviews": 214,
+    "weight": "250g",
+    "dimensions": "10 x 4 x 2 cm",
+    "materials": ["Thép không gỉ"],
+    "isFeatured": true
+  },
+  {
+    "id": 8,
+    "name": "Balo Dã Ngoại Chống Thấm 30L",
+    "description": "Balo dung tích lớn, nhiều ngăn, chất liệu chống thấm nước.",
+    "price": 420000,
+    "images": [
+      "https://example.com/images/balo-da-ngoai.jpg"
+    ],
+    "category": "Ba lô - Túi xách",
+    "brand": "Decathlon",
+    "stock": 22,
+    "rating": 4.3,
+    "reviews": 78,
+    "weight": "1.1kg",
+    "dimensions": "50 x 30 x 20 cm",
+    "materials": ["Vải Polyester 600D"],
+    "isFeatured": false
+  },
+  {
+    "id": 9,
+    "name": "Thảm Trải Picnic Chống Ẩm",
+    "description": "Thảm trải dã ngoại 2 lớp, chống thấm, dễ vệ sinh, gấp gọn tiện lợi.",
+    "price": 150000,
+    "images": [
+      "https://example.com/images/tham-picnic.jpg"
+    ],
+    "category": "Phụ kiện trại",
+    "brand": "Outwell",
+    "stock": 75,
+    "rating": 4.1,
+    "reviews": 26,
+    "weight": "900g",
+    "dimensions": "200 x 150 cm",
+    "materials": ["Vải chống nước", "Lớp lót nhôm"],
+    "isFeatured": false
+  },
+  {
+    "id": 10,
+    "name": "Đèn Pin Đội Đầu Siêu Sáng",
+    "description": "Đèn pin đeo đầu 3 chế độ sáng, pin sạc, phù hợp đi đêm hoặc leo núi.",
+    "price": 175000,
+    "images": [
+      "https://example.com/images/den-pin-doi-dau.jpg"
+    ],
+    "category": "Thiết bị chiếu sáng",
+    "brand": "Black Diamond",
+    "stock": 28,
+    "rating": 4.6,
+    "reviews": 59,
+    "weight": "180g",
+    "dimensions": "7 x 5 x 4 cm",
+    "materials": ["Nhựa ABS", "Dây co giãn"],
+    "isFeatured": false
+  }
+]

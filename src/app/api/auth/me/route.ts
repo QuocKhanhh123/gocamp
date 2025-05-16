@@ -3,7 +3,7 @@ import { verifyToken } from '@/libs/jwts';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const token = (await cookies()).get('token')?.value;
+  const token = (await cookies()).get('access_token')?.value;
 
   if (!token) return NextResponse.json({ user: null });
 
