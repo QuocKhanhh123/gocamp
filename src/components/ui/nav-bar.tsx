@@ -4,9 +4,21 @@ import { useAuth } from '@/context/AuthContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaSearch, FaShoppingCart, FaUserCircle } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+
 
 export default function Navbar() {
   const { user, logout, loading } = useAuth();
+  const [search, setSearch] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (search.trim()) {
+      router.push(`/product/search?q=${encodeURIComponent(search.trim())}`);
+    }
+  };
 
   return (
     <nav className="bg-[#9AB6AA] py-4 px-8 shadow-md flex items-center justify-between">
@@ -20,8 +32,7 @@ export default function Navbar() {
       {/* Menu items */}
       <div className="hidden md:flex gap-6 text-white font-semibold text-[16px]">
         <Link href="/" className="hover:text-yellow-300 transition duration-200">Trang chủ</Link>
-        <Link href="/rent" className="hover:text-yellow-300 transition duration-200">Cho thuê</Link>
-        <Link href="/camp-packages" className="hover:text-yellow-300 transition duration-200">Gói cắm trại</Link>
+        <Link href="/package" className="hover:text-yellow-300 transition duration-200">Gói cắm trại</Link>
         <Link href="/suggestLocation" className="hover:text-yellow-300 transition duration-200">Gợi ý địa điểm</Link>
         <Link href="/connect-groups" className="hover:text-yellow-300 transition duration-200">Kết nối nhóm</Link>
 
@@ -62,34 +73,44 @@ export default function Navbar() {
 
       <div className="flex items-center gap-4">
         {/* Search box */}
-        <div className="flex items-center bg-white rounded-full px-4 py-1 border border-green-700 focus-within:ring">
-          <input
-            type="text"
-            placeholder="Tìm kiếm sản phẩm"
-            className="outline-none bg-transparent text-sm text-gray-700 w-40"
-          />
-          <FaSearch className="text-green-800 ml-2" />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="flex items-center bg-white rounded-full px-4 py-1 border border-green-700 focus-within:ring">
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Tìm kiếm sản phẩm"
+              className="outline-none bg-transparent text-sm text-gray-700 w-40"
+            />
+            <button type="submit">
+              <FaSearch className="text-green-800 ml-2" />
+            </button>
+          </div>
+        </form>
 
         {/* User icon */}
         {user ? (
-          <>
+          <div className="flex items-center gap-2">
             <Link href="/profile">
               <FaUserCircle className="text-green-900 text-2xl" />
             </Link>
             <button
               onClick={logout}
-              className="mt-2 text-red-500 hover:text-red-700"
+              className="text-red-500 hover:text-red-700 text-sm"
             >
               Đăng xuất
-            </button></>
-
+            </button>
+          </div>
         ) : (
-          <Link href="/login">
-            Đăng nhập
-          </Link>
+          <div className="flex items-center">
+            <Link
+              href="/login"
+              className="text-green-900 hover:underline text-sm"
+            >
+              Đăng nhập
+            </Link>
+          </div>
         )}
-
 
         <Link
           href="/cart"

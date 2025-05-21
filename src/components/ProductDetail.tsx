@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation'; // ✅ Thêm useRouter
 
 interface Product {
   id: number;
@@ -22,6 +22,7 @@ interface Product {
 
 export default function ProductDetail({ id }: { id: string }) {
   const [product, setProduct] = useState<Product | null>(null);
+  const router = useRouter(); 
 
   useEffect(() => {
     if (id) {
@@ -32,6 +33,10 @@ export default function ProductDetail({ id }: { id: string }) {
   }, [id]);
 
   if (!product) return <p>Đang tải chi tiết sản phẩm...</p>;
+
+  const handleBuyNow = () => {
+    router.push(`/checkout?productId=${product.id}`);
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start my-10">
@@ -56,7 +61,10 @@ export default function ProductDetail({ id }: { id: string }) {
           <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded font-medium">
             Thêm vào giỏ hàng
           </button>
-          <button className="bg-[#7fa18f] hover:bg-[#6e907e] text-white px-6 py-2 rounded font-medium">
+          <button
+            onClick={handleBuyNow} // ✅ Bắt sự kiện điều hướng
+            className="bg-[#7fa18f] hover:bg-[#6e907e] text-white px-6 py-2 rounded font-medium"
+          >
             Mua ngay
           </button>
         </div>
